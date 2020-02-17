@@ -11,7 +11,7 @@ This is a DNA Sequence.
 
 We can decode the sequence using the below image:
 
-![DNA CODES](/infosecians/img/dna_codes.png)
+![DNA CODES](/img/dna_codes.png)
 
 sauce: https://github.com/JohnHammond/ctf-katana
 
@@ -30,7 +30,7 @@ sauce: https://github.com/JohnHammond/ctf-katana
 
 The flag is somewhere in Network Traffic!!
 
-Here is a .pcap file: [inf.pcap](/infosecians/data/inf.pcap)
+Here is a .pcap file: [inf.pcap](/data/inf.pcap)
 
 As all these packets are ICMP and tried to extract the data section.
 
@@ -67,7 +67,7 @@ we got the flag from the hidden text.
 
 Can you Search and find the flag inside the ZIP file??
 
-[root.zip](/infosecians/data/root.zip)
+[root.zip](/data/root.zip)
 
 Extracted the root.zip
 used grep command to search entire subfolders:
@@ -83,7 +83,7 @@ flag is: **INF{grep_is_nice}**
 
 John forgot the password to open his sensitive database! can you please help him out??
 
-we have a KeePass2 password database file: [key](/infosecians/data/key)
+we have a KeePass2 password database file: [key](/data/key)
 ```
 ~$ file key
 ~$ key: Keepass password database 2.x KDBX
@@ -133,6 +133,6 @@ If you want to read more: https://www.rubydevices.com.au/blog/how-to-hack-keepas
 
 Help yourself to put the path to flag.txt together to get the flag for example, if it was located at ab/cd/ef/gh/ij/flag.txt, your flag would be INF{abcdefghij}
 
-we have an [.iso image](/infosecians/data/fsimage.iso.gz)
+we have an [.iso image](/data/fsimage.iso.gz)
 
 I'll mount it to go through the files.
