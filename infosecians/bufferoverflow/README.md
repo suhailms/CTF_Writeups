@@ -3,4 +3,4 @@
 
 ## Buffer
 
-FILE: [buffer](data/vizz
+FILE: [buffer](data/vizz)
