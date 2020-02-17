@@ -136,3 +136,12 @@ Help yourself to put the path to flag.txt together to get the flag for example, 
 we have an [.iso image](data/fsimage.iso.gz)
 
 I'll mount it to go through the files.
+
+
+-------------------
+
+## INFINITY_ZIPPING
+
+To get the Flag you should follow it to deepest corners of the Universe,you might face some dangers, you gotta go! for you are the chosen one !
+
+File: [infinity_is_cool.zip](data/infinity_is_cool.zip)
