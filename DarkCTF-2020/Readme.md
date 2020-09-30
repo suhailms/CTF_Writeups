@@ -93,6 +93,18 @@ I edited the user-agent to '9e9 'and sent a new request from my firefox and got 
 
 
 ### Apache Logs
+![](img/apache_logs.png)
+
+From the logs we could see some SQLi payloads
+after URL Decoding;
+![](img/apache_logs01.png)
+
+Then I used cyberchef to decode from decimal to ascii
+![](img/apache_logs02.png)
+Thanks @ysf for the recipe
+
+**Flag: DarkCTF{5ql_1nj3ct10n}**
+
 
 ### Simple_SQL
 
