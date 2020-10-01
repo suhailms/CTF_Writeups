@@ -169,7 +169,9 @@ root@z3n:/mnt/windows_mount/contacts# ls -la
 ![](img/contact01.png)  
 I realized the flags are splitted in Notes section in each contact.
 
-```root@z3n:/mnt/windows_mount/contacts# cat * | grep "Notes"```  
+```bash
+root@z3n:/mnt/windows_mount/contacts# cat * | grep "Notes"
+```  
 ![](img/contact02.png)
 
 **Flag: darkCTF{C0ntacts_4re_1mp0rtant}**
