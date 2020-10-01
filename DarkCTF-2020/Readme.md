@@ -131,10 +131,10 @@ from the 9th entry we got the flag
 **Flag: darkCTF{it_is_very_easy_to_find}**
 
 ### So_Simple
-![](img/so_simple.png)
+![](img/so_simple.png)  
 Like previous challenge they gave a clue 'Try id as parameter'.
 Okay, i was able to produce a sql error in /?id='
-Lets try with SQLi. They mentioned You may get flag manually. I was lazy and I used SQLMap.
+Lets try with SQLi. They mentioned 'You may get flag manually'. I was lazy and I used SQLMap, maybe this is not the intented way to solve.
 Here is the commands I used:
 ```shell
 sqlmap -u http://web.darkarmy.xyz:30001/?id=8 --dbs
@@ -148,6 +148,30 @@ we got the flag from users table
 
 ## Forensics
 ### Wolfie's Contact
+![](img/contact00.png)  
+There is a attached file: wolfie_evidence.rar. It contains a E01 file.  
+What's a E01 File?
+> The E01 (Encase Image File Format) file keeps backup of various types of acquired digital evidences that includes disk imaging, storing of logical files, etc
+
+okay, We have to do some digging on this file
+```bash
+root@z3n:/home/z3n/CTF/darkCTF_2020/forensics# mkdir /mnt/ewf
+root@z3n:/home/z3n/CTF/darkCTF_2020/forensics# ewfmount wolfie_evidence.E01 /mnt/ewf
+root@z3n:/home/z3n/CTF/darkCTF_2020/forensics# cd /mnt/ewf
+root@z3n:/mnt/ewf# ls
+ewf1
+root@z3n:/mnt/ewf# mkdir /mnt/windows_mount
+root@z3n:/mnt/ewf# mount -o loop,ro,show_sys_files,streams_interface=windows /mnt/ewf/ewf1 /mnt/windows_mount
+root@z3n:/mnt/ewf# cd /mnt/windows_mount
+root@z3n:/mnt/windows_mount# cd contacts
+root@z3n:/mnt/windows_mount/contacts# ls -la
+```
+![](img/contact01.png)
+I realized the flags are splitted in Notes section in each contact.  
+```root@z3n:/mnt/windows_mount/contacts# cat * | grep "Notes"```  
+![](img/contact02.png)
+
+Resource: https://digital-forensics.sans.org/media/sift_cheat_sheet.pdf
 
 
 
