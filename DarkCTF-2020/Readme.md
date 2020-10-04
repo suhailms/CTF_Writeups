@@ -178,6 +178,6 @@ root@z3n:/mnt/windows_mount/contacts# cat * | grep "Notes"
 
 Resource: https://digital-forensics.sans.org/media/sift_cheat_sheet.pdf
 
-~~~
+<!--
 ToDo: add Official and Community Writeup links
-~~~
+-->
